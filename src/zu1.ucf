@@ -1,0 +1,8 @@
+NET "CLK" LOC = P56;
+NET "rst" LOC = "P120" | PULLDOWN;
+NET "CTL_PIN1" LOC = P75;
+NET "CTL_PIN2" LOC = P78;
+NET "CTL_PIN3" LOC = P79;
+NET "servo_en<0>" LOC = P29;
+NET "servo_en<1>" LOC = P27;
+NET "servo_en<2>" LOC = P30;

@@ -1,0 +1,15 @@
+//! **************************************************************************
+// Written by: Map P.20131013 on Wed Apr 19 18:56:01 2017
+//! **************************************************************************
+
+SCHEMATIC START;
+COMP "CTL_PIN1" LOCATE = SITE "P75" LEVEL 1;
+COMP "servo_en<0>" LOCATE = SITE "P29" LEVEL 1;
+COMP "CTL_PIN2" LOCATE = SITE "P78" LEVEL 1;
+COMP "CTL_PIN3" LOCATE = SITE "P79" LEVEL 1;
+COMP "servo_en<1>" LOCATE = SITE "P27" LEVEL 1;
+COMP "servo_en<2>" LOCATE = SITE "P30" LEVEL 1;
+COMP "CLK" LOCATE = SITE "P56" LEVEL 1;
+COMP "rst" LOCATE = SITE "P120" LEVEL 1;
+SCHEMATIC END;
+
