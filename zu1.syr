@@ -5,14 +5,14 @@ Parameter TMPDIR set to xst/projnav.tmp
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.11 secs
+Total CPU time to Xst completion: 0.04 secs
  
 --> 
 Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.11 secs
+Total CPU time to Xst completion: 0.04 secs
  
 --> 
 Reading design: zu1.prj
@@ -125,9 +125,9 @@ WARNING:HDLCompiler:413 - "/home/zhangli/src/fpga/zu1/src/duoji.v" Line 37: Resu
 WARNING:HDLCompiler:413 - "/home/zhangli/src/fpga/zu1/src/zu1.v" Line 52: Result of 25-bit expression is truncated to fit in 24-bit target.
 WARNING:HDLCompiler:413 - "/home/zhangli/src/fpga/zu1/src/zu1.v" Line 56: Result of 9-bit expression is truncated to fit in 8-bit target.
 WARNING:HDLCompiler:413 - "/home/zhangli/src/fpga/zu1/src/zu1.v" Line 59: Result of 32-bit expression is truncated to fit in 16-bit target.
-WARNING:HDLCompiler:413 - "/home/zhangli/src/fpga/zu1/src/zu1.v" Line 67: Result of 32-bit expression is truncated to fit in 16-bit target.
+WARNING:HDLCompiler:413 - "/home/zhangli/src/fpga/zu1/src/zu1.v" Line 61: Result of 32-bit expression is truncated to fit in 16-bit target.
+WARNING:HDLCompiler:413 - "/home/zhangli/src/fpga/zu1/src/zu1.v" Line 71: Result of 32-bit expression is truncated to fit in 16-bit target.
 WARNING:HDLCompiler:413 - "/home/zhangli/src/fpga/zu1/src/zu1.v" Line 72: Result of 32-bit expression is truncated to fit in 16-bit target.
-WARNING:HDLCompiler:413 - "/home/zhangli/src/fpga/zu1/src/zu1.v" Line 77: Result of 32-bit expression is truncated to fit in 16-bit target.
 
 =========================================================================
 *                           HDL Synthesis                               *
@@ -141,21 +141,22 @@ Synthesizing Unit <zu1>.
     Found 24-bit register for signal <prescaler>.
     Found 8-bit register for signal <count>.
     Found 12-bit subtractor for signal <GND_1_o_GND_1_o_sub_6_OUT> created at line 59.
+    Found 12-bit subtractor for signal <GND_1_o_GND_1_o_sub_8_OUT> created at line 61.
+    Found 13-bit subtractor for signal <GND_1_o_GND_1_o_sub_20_OUT> created at line 71.
     Found 12-bit subtractor for signal <GND_1_o_GND_1_o_sub_21_OUT> created at line 72.
-    Found 13-bit subtractor for signal <GND_1_o_GND_1_o_sub_28_OUT> created at line 77.
     Found 24-bit adder for signal <prescaler[23]_GND_1_o_add_1_OUT> created at line 52.
     Found 8-bit adder for signal <count[7]_GND_1_o_add_3_OUT> created at line 56.
-    Found 12-bit adder for signal <n0107[11:0]> created at line 65.
-    Found 12-bit adder for signal <n0109[11:0]> created at line 66.
+    Found 12-bit adder for signal <n0102[1:12]> created at line 60.
+    Found 12-bit adder for signal <n0104[11:0]> created at line 65.
+    Found 12-bit adder for signal <n0106[11:0]> created at line 73.
     Found 8-bit comparator lessequal for signal <count[7]_GND_1_o_LessThan_5_o> created at line 57
-    Found 8-bit comparator greater for signal <count[7]_GND_1_o_LessThan_11_o> created at line 63
+    Found 8-bit comparator greater for signal <count[7]_GND_1_o_LessThan_13_o> created at line 63
     Found 8-bit comparator greater for signal <count[7]_GND_1_o_LessThan_19_o> created at line 69
-    Found 8-bit comparator greater for signal <count[7]_GND_1_o_LessThan_27_o> created at line 75
     Summary:
-	inferred   7 Adder/Subtractor(s).
+	inferred   9 Adder/Subtractor(s).
 	inferred  80 D-type flip-flop(s).
-	inferred   4 Comparator(s).
-	inferred   9 Multiplexer(s).
+	inferred   3 Comparator(s).
+	inferred   6 Multiplexer(s).
 Unit <zu1> synthesized.
 
 Synthesizing Unit <duoji>.
@@ -177,9 +178,9 @@ Unit <duoji> synthesized.
 HDL Synthesis Report
 
 Macro Statistics
-# Adders/Subtractors                                   : 13
- 12-bit adder                                          : 2
- 12-bit subtractor                                     : 2
+# Adders/Subtractors                                   : 15
+ 12-bit adder                                          : 3
+ 12-bit subtractor                                     : 3
  13-bit subtractor                                     : 1
  16-bit adder                                          : 6
  24-bit adder                                          : 1
@@ -189,12 +190,12 @@ Macro Statistics
  16-bit register                                       : 9
  24-bit register                                       : 1
  8-bit register                                        : 1
-# Comparators                                          : 7
+# Comparators                                          : 6
  16-bit comparator greater                             : 3
- 8-bit comparator greater                              : 3
+ 8-bit comparator greater                              : 2
  8-bit comparator lessequal                            : 1
-# Multiplexers                                         : 9
- 16-bit 2-to-1 multiplexer                             : 9
+# Multiplexers                                         : 6
+ 16-bit 2-to-1 multiplexer                             : 6
 
 =========================================================================
 
@@ -217,9 +218,9 @@ Unit <zu1> synthesized (advanced).
 Advanced HDL Synthesis Report
 
 Macro Statistics
-# Adders/Subtractors                                   : 5
- 12-bit adder                                          : 2
- 12-bit subtractor                                     : 2
+# Adders/Subtractors                                   : 7
+ 12-bit adder                                          : 3
+ 12-bit subtractor                                     : 3
  13-bit subtractor                                     : 1
 # Counters                                             : 8
  16-bit up counter                                     : 6
@@ -227,19 +228,22 @@ Macro Statistics
  8-bit up counter                                      : 1
 # Registers                                            : 51
  Flip-Flops                                            : 51
-# Comparators                                          : 7
+# Comparators                                          : 6
  16-bit comparator greater                             : 3
- 8-bit comparator greater                              : 3
+ 8-bit comparator greater                              : 2
  8-bit comparator lessequal                            : 1
-# Multiplexers                                         : 9
- 16-bit 2-to-1 multiplexer                             : 9
+# Multiplexers                                         : 6
+ 16-bit 2-to-1 multiplexer                             : 6
 
 =========================================================================
 
 =========================================================================
 *                         Low Level Synthesis                           *
 =========================================================================
-WARNING:Xst:1710 - FF/Latch <pul_len2_0> (without init value) has a constant value of 0 in block <zu1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <pul_len1_0> (without init value) has a constant value of 0 in block <zu1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <pul_len1_1> (without init value) has a constant value of 0 in block <zu1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <pul_len1_2> (without init value) has a constant value of 1 in block <zu1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <pul_len2_0> (without init value) has a constant value of 0 in block <zu1>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <pul_len2_1> (without init value) has a constant value of 0 in block <zu1>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <pul_len2_12> (without init value) has a constant value of 0 in block <zu1>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <pul_len2_13> (without init value) has a constant value of 0 in block <zu1>. This FF/Latch will be trimmed during the optimization process.
@@ -251,40 +255,63 @@ WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <pul_len3_12> (witho
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <pul_len3_13> (without init value) has a constant value of 0 in block <zu1>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <pul_len3_14> (without init value) has a constant value of 0 in block <zu1>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <pul_len3_15> (without init value) has a constant value of 0 in block <zu1>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <pul_len1_0> (without init value) has a constant value of 0 in block <zu1>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <pul_len1_1> (without init value) has a constant value of 0 in block <zu1>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <pul_len1_2> (without init value) has a constant value of 1 in block <zu1>. This FF/Latch will be trimmed during the optimization process.
 INFO:Xst:2261 - The FF/Latch <pul_len1_12> in Unit <zu1> is equivalent to the following 3 FFs/Latches, which will be removed : <pul_len1_13> <pul_len1_14> <pul_len1_15> 
 INFO:Xst:2261 - The FF/Latch <pul_len2_2> in Unit <zu1> is equivalent to the following FF/Latch, which will be removed : <pul_len3_2> 
 
 Optimizing unit <zu1> ...
-WARNING:Xst:1710 - FF/Latch <pul_len2_9> (without init value) has a constant value of 0 in block <zu1>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <pul_len2_10> (without init value) has a constant value of 1 in block <zu1>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <pul_len2_11> (without init value) has a constant value of 0 in block <zu1>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <pul_len3_10> (without init value) has a constant value of 1 in block <zu1>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <pul_len3_11> (without init value) has a constant value of 0 in block <zu1>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <pul_len2_8> (without init value) has a constant value of 1 in block <zu1>. This FF/Latch will be trimmed during the optimization process.
-INFO:Xst:2261 - The FF/Latch <pul_len3_7> in Unit <zu1> is equivalent to the following FF/Latch, which will be removed : <pul_len3_8> 
-WARNING:Xst:1710 - FF/Latch <pul_len2_8> (without init value) has a constant value of 1 in block <zu1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <pul_len3_11> (without init value) has a constant value of 0 in block <zu1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <pul_len3_11> (without init value) has a constant value of 0 in block <zu1>. This FF/Latch will be trimmed during the optimization process.
+INFO:Xst:2261 - The FF/Latch <pul_len1_11> in Unit <zu1> is equivalent to the following FF/Latch, which will be removed : <pul_len1_12> 
+WARNING:Xst:1293 - FF/Latch <x1/prescaler_15> has a constant value of 0 in block <zu1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <d1/prescaler_6> has a constant value of 0 in block <zu1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <d1/prescaler_7> has a constant value of 0 in block <zu1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <d1/prescaler_8> has a constant value of 0 in block <zu1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <d1/prescaler_9> has a constant value of 0 in block <zu1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <d1/prescaler_10> has a constant value of 0 in block <zu1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <d1/prescaler_11> has a constant value of 0 in block <zu1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <d1/prescaler_12> has a constant value of 0 in block <zu1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <d1/prescaler_13> has a constant value of 0 in block <zu1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <d1/prescaler_14> has a constant value of 0 in block <zu1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <d1/prescaler_15> has a constant value of 0 in block <zu1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <y1/prescaler_6> has a constant value of 0 in block <zu1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <y1/prescaler_7> has a constant value of 0 in block <zu1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <y1/prescaler_8> has a constant value of 0 in block <zu1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <y1/prescaler_9> has a constant value of 0 in block <zu1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <y1/prescaler_10> has a constant value of 0 in block <zu1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <y1/prescaler_11> has a constant value of 0 in block <zu1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <y1/prescaler_12> has a constant value of 0 in block <zu1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <y1/prescaler_13> has a constant value of 0 in block <zu1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <y1/prescaler_14> has a constant value of 0 in block <zu1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <y1/prescaler_15> has a constant value of 0 in block <zu1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <count_7> has a constant value of 0 in block <zu1>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <pul_len1_10> (without init value) has a constant value of 1 in block <zu1>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <pul_len1_11> (without init value) has a constant value of 0 in block <zu1>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <pul_len1_12> (without init value) has a constant value of 0 in block <zu1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <pul_len2_10> (without init value) has a constant value of 1 in block <zu1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <pul_len2_11> (without init value) has a constant value of 0 in block <zu1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <pul_len3_8> (without init value) has a constant value of 1 in block <zu1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <pul_len3_9> (without init value) has a constant value of 0 in block <zu1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <pul_len3_10> (without init value) has a constant value of 1 in block <zu1>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <prescaler_19> has a constant value of 0 in block <zu1>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <prescaler_20> has a constant value of 0 in block <zu1>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <prescaler_21> has a constant value of 0 in block <zu1>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <prescaler_22> has a constant value of 0 in block <zu1>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <prescaler_23> has a constant value of 0 in block <zu1>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <count_7> has a constant value of 0 in block <zu1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <x1/prescaler_6> has a constant value of 0 in block <zu1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <x1/prescaler_7> has a constant value of 0 in block <zu1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <x1/prescaler_8> has a constant value of 0 in block <zu1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <x1/prescaler_9> has a constant value of 0 in block <zu1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <x1/prescaler_10> has a constant value of 0 in block <zu1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <x1/prescaler_11> has a constant value of 0 in block <zu1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <x1/prescaler_12> has a constant value of 0 in block <zu1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <x1/prescaler_13> has a constant value of 0 in block <zu1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <x1/prescaler_14> has a constant value of 0 in block <zu1>. This FF/Latch will be trimmed during the optimization process.
 INFO:Xst:2261 - The FF/Latch <x1/prescaler_0> in Unit <zu1> is equivalent to the following 2 FFs/Latches, which will be removed : <d1/prescaler_0> <y1/prescaler_0> 
 INFO:Xst:2261 - The FF/Latch <x1/prescaler_1> in Unit <zu1> is equivalent to the following 2 FFs/Latches, which will be removed : <d1/prescaler_1> <y1/prescaler_1> 
 INFO:Xst:2261 - The FF/Latch <x1/prescaler_2> in Unit <zu1> is equivalent to the following 2 FFs/Latches, which will be removed : <d1/prescaler_2> <y1/prescaler_2> 
 INFO:Xst:2261 - The FF/Latch <x1/prescaler_3> in Unit <zu1> is equivalent to the following 2 FFs/Latches, which will be removed : <d1/prescaler_3> <y1/prescaler_3> 
 INFO:Xst:2261 - The FF/Latch <x1/prescaler_4> in Unit <zu1> is equivalent to the following 2 FFs/Latches, which will be removed : <d1/prescaler_4> <y1/prescaler_4> 
 INFO:Xst:2261 - The FF/Latch <x1/prescaler_5> in Unit <zu1> is equivalent to the following 2 FFs/Latches, which will be removed : <d1/prescaler_5> <y1/prescaler_5> 
-INFO:Xst:2261 - The FF/Latch <x1/prescaler_6> in Unit <zu1> is equivalent to the following 2 FFs/Latches, which will be removed : <d1/prescaler_6> <y1/prescaler_6> 
-INFO:Xst:2261 - The FF/Latch <x1/prescaler_7> in Unit <zu1> is equivalent to the following 2 FFs/Latches, which will be removed : <d1/prescaler_7> <y1/prescaler_7> 
-INFO:Xst:2261 - The FF/Latch <x1/prescaler_8> in Unit <zu1> is equivalent to the following 2 FFs/Latches, which will be removed : <d1/prescaler_8> <y1/prescaler_8> 
-INFO:Xst:2261 - The FF/Latch <x1/prescaler_9> in Unit <zu1> is equivalent to the following 2 FFs/Latches, which will be removed : <d1/prescaler_9> <y1/prescaler_9> 
 INFO:Xst:2261 - The FF/Latch <x1/count_0> in Unit <zu1> is equivalent to the following 2 FFs/Latches, which will be removed : <d1/count_0> <y1/count_0> 
 INFO:Xst:2261 - The FF/Latch <x1/count_1> in Unit <zu1> is equivalent to the following 2 FFs/Latches, which will be removed : <d1/count_1> <y1/count_1> 
 INFO:Xst:2261 - The FF/Latch <x1/count_2> in Unit <zu1> is equivalent to the following 2 FFs/Latches, which will be removed : <d1/count_2> <y1/count_2> 
@@ -295,28 +322,19 @@ INFO:Xst:2261 - The FF/Latch <x1/count_6> in Unit <zu1> is equivalent to the fol
 INFO:Xst:2261 - The FF/Latch <x1/count_7> in Unit <zu1> is equivalent to the following 2 FFs/Latches, which will be removed : <d1/count_7> <y1/count_7> 
 INFO:Xst:2261 - The FF/Latch <x1/count_8> in Unit <zu1> is equivalent to the following 2 FFs/Latches, which will be removed : <d1/count_8> <y1/count_8> 
 INFO:Xst:2261 - The FF/Latch <x1/count_9> in Unit <zu1> is equivalent to the following 2 FFs/Latches, which will be removed : <d1/count_9> <y1/count_9> 
+INFO:Xst:2261 - The FF/Latch <pul_len2_7> in Unit <zu1> is equivalent to the following FF/Latch, which will be removed : <pul_len2_8> 
 INFO:Xst:2261 - The FF/Latch <x1/count_10> in Unit <zu1> is equivalent to the following 2 FFs/Latches, which will be removed : <d1/count_10> <y1/count_10> 
 INFO:Xst:2261 - The FF/Latch <x1/count_11> in Unit <zu1> is equivalent to the following 2 FFs/Latches, which will be removed : <d1/count_11> <y1/count_11> 
 INFO:Xst:2261 - The FF/Latch <x1/count_12> in Unit <zu1> is equivalent to the following 2 FFs/Latches, which will be removed : <d1/count_12> <y1/count_12> 
 INFO:Xst:2261 - The FF/Latch <x1/count_13> in Unit <zu1> is equivalent to the following 2 FFs/Latches, which will be removed : <d1/count_13> <y1/count_13> 
 INFO:Xst:2261 - The FF/Latch <x1/count_14> in Unit <zu1> is equivalent to the following 2 FFs/Latches, which will be removed : <d1/count_14> <y1/count_14> 
 INFO:Xst:2261 - The FF/Latch <x1/count_15> in Unit <zu1> is equivalent to the following 2 FFs/Latches, which will be removed : <d1/count_15> <y1/count_15> 
-INFO:Xst:2261 - The FF/Latch <pul_len3_7> in Unit <zu1> is equivalent to the following FF/Latch, which will be removed : <pul_len3_8> 
-INFO:Xst:2261 - The FF/Latch <x1/prescaler_10> in Unit <zu1> is equivalent to the following 2 FFs/Latches, which will be removed : <d1/prescaler_10> <y1/prescaler_10> 
-INFO:Xst:2261 - The FF/Latch <x1/prescaler_11> in Unit <zu1> is equivalent to the following 2 FFs/Latches, which will be removed : <d1/prescaler_11> <y1/prescaler_11> 
-INFO:Xst:2261 - The FF/Latch <x1/prescaler_12> in Unit <zu1> is equivalent to the following 2 FFs/Latches, which will be removed : <d1/prescaler_12> <y1/prescaler_12> 
-INFO:Xst:2261 - The FF/Latch <x1/prescaler_13> in Unit <zu1> is equivalent to the following 2 FFs/Latches, which will be removed : <d1/prescaler_13> <y1/prescaler_13> 
-INFO:Xst:2261 - The FF/Latch <x1/prescaler_14> in Unit <zu1> is equivalent to the following 2 FFs/Latches, which will be removed : <d1/prescaler_14> <y1/prescaler_14> 
-INFO:Xst:2261 - The FF/Latch <x1/prescaler_15> in Unit <zu1> is equivalent to the following 2 FFs/Latches, which will be removed : <d1/prescaler_15> <y1/prescaler_15> 
 INFO:Xst:3203 - The FF/Latch <pul_len1_8> in Unit <zu1> is the opposite to the following FF/Latch, which will be removed : <pul_len1_9> 
-INFO:Xst:3203 - The FF/Latch <pul_len3_7> in Unit <zu1> is the opposite to the following FF/Latch, which will be removed : <pul_len3_9> 
+INFO:Xst:3203 - The FF/Latch <pul_len2_7> in Unit <zu1> is the opposite to the following FF/Latch, which will be removed : <pul_len2_9> 
 
 Mapping all equations...
 Building and optimizing final netlist ...
 Found area constraint ratio of 100 (+ 5) on block zu1, actual ratio is 3.
-FlipFlop count_0 has been replicated 1 time(s)
-FlipFlop count_1 has been replicated 1 time(s)
-FlipFlop count_2 has been replicated 1 time(s)
 
 Final Macro Processing ...
 
@@ -324,8 +342,8 @@ Final Macro Processing ...
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 81
- Flip-Flops                                            : 81
+# Registers                                            : 68
+ Flip-Flops                                            : 68
 
 =========================================================================
 
@@ -348,26 +366,26 @@ Top Level Output File Name         : zu1.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 348
+# BELS                             : 287
 #      GND                         : 1
-#      INV                         : 11
-#      LUT1                        : 54
-#      LUT2                        : 21
-#      LUT3                        : 11
-#      LUT4                        : 58
-#      LUT5                        : 18
-#      LUT6                        : 33
-#      MUXCY                       : 78
-#      MUXF7                       : 4
+#      INV                         : 10
+#      LUT1                        : 44
+#      LUT2                        : 22
+#      LUT3                        : 5
+#      LUT4                        : 39
+#      LUT5                        : 23
+#      LUT6                        : 21
+#      MUXCY                       : 68
+#      MUXF7                       : 5
 #      VCC                         : 1
-#      XORCY                       : 58
-# FlipFlops/Latches                : 81
-#      FD                          : 26
+#      XORCY                       : 48
+# FlipFlops/Latches                : 68
+#      FD                          : 7
 #      FDCE                        : 3
 #      FDE                         : 3
 #      FDPE                        : 14
-#      FDR                         : 16
-#      FDRE                        : 19
+#      FDR                         : 6
+#      FDRE                        : 35
 # Clock Buffers                    : 1
 #      BUFGP                       : 1
 # IO Buffers                       : 7
@@ -381,15 +399,15 @@ Selected Device : 6slx9tqg144-2
 
 
 Slice Logic Utilization: 
- Number of Slice Registers:              81  out of  11440     0%  
- Number of Slice LUTs:                  206  out of   5720     3%  
-    Number used as Logic:               206  out of   5720     3%  
+ Number of Slice Registers:              68  out of  11440     0%  
+ Number of Slice LUTs:                  164  out of   5720     2%  
+    Number used as Logic:               164  out of   5720     2%  
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:    206
-   Number with an unused Flip Flop:     125  out of    206    60%  
-   Number with an unused LUT:             0  out of    206     0%  
-   Number of fully used LUT-FF pairs:    81  out of    206    39%  
+ Number of LUT Flip Flop pairs used:    164
+   Number with an unused Flip Flop:      96  out of    164    58%  
+   Number with an unused LUT:             0  out of    164     0%  
+   Number of fully used LUT-FF pairs:    68  out of    164    41%  
    Number of unique control sets:         7
 
 IO Utilization: 
@@ -420,7 +438,7 @@ Clock Information:
 -----------------------------------+------------------------+-------+
 Clock Signal                       | Clock buffer(FF name)  | Load  |
 -----------------------------------+------------------------+-------+
-CLK                                | BUFGP                  | 81    |
+CLK                                | BUFGP                  | 68    |
 -----------------------------------+------------------------+-------+
 
 Asynchronous Control Signals Information:
@@ -431,8 +449,8 @@ Timing Summary:
 ---------------
 Speed Grade: -2
 
-   Minimum period: 5.812ns (Maximum Frequency: 172.058MHz)
-   Minimum input arrival time before clock: 5.699ns
+   Minimum period: 6.532ns (Maximum Frequency: 153.095MHz)
+   Minimum input arrival time before clock: 5.201ns
    Maximum output required time after clock: 4.118ns
    Maximum combinational path delay: No path found
 
@@ -442,50 +460,49 @@ All values displayed in nanoseconds (ns)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'CLK'
-  Clock period: 5.812ns (frequency: 172.058MHz)
-  Total number of paths / destination ports: 3521 / 136
+  Clock period: 6.532ns (frequency: 153.095MHz)
+  Total number of paths / destination ports: 2726 / 145
 -------------------------------------------------------------------------
-Delay:               5.812ns (Levels of Logic = 4)
-  Source:            prescaler_15 (FF)
-  Destination:       count_0 (FF)
+Delay:               6.532ns (Levels of Logic = 5)
+  Source:            count_6 (FF)
+  Destination:       pul_len3_7 (FF)
   Source Clock:      CLK rising
   Destination Clock: CLK rising
 
-  Data Path: prescaler_15 to count_0
+  Data Path: count_6 to pul_len3_7
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDRE:C->Q             2   0.525   1.156  prescaler_15 (prescaler_15)
-     LUT5:I0->O            2   0.254   0.954  GND_1_o_GND_1_o_equal_3_o<23>1 (GND_1_o_GND_1_o_equal_3_o<23>)
-     LUT5:I2->O           13   0.235   1.098  GND_1_o_GND_1_o_equal_3_o<23>4 (GND_1_o_GND_1_o_equal_3_o)
-     LUT6:I5->O           10   0.254   1.008  _n0123 (_n0123)
-     LUT4:I3->O            1   0.254   0.000  count_0_rstpot (count_0_rstpot)
-     FD:D                      0.074          count_0
+     FD:C->Q              13   0.525   1.206  count_6 (count_6)
+     LUT2:I0->O            1   0.250   0.682  GND_1_o_count[7]_LessThan_12_o1_SW0 (N17)
+     LUT6:I5->O           29   0.254   1.746  GND_1_o_count[7]_LessThan_12_o1 (GND_1_o_count[7]_LessThan_12_o)
+     LUT4:I0->O            1   0.254   0.000  Mmux_pul_len3[15]_GND_1_o_mux_24_OUT81_G (N34)
+     MUXF7:I1->O           1   0.175   1.112  Mmux_pul_len3[15]_GND_1_o_mux_24_OUT81 (pul_len3[15]_GND_1_o_mux_24_OUT<7>)
+     LUT5:I0->O            1   0.254   0.000  pul_len3_7_dpot (pul_len3_7_dpot)
+     FDPE:D                    0.074          pul_len3_7
     ----------------------------------------
-    Total                      5.812ns (1.596ns logic, 4.216ns route)
-                                       (27.5% logic, 72.5% route)
+    Total                      6.532ns (1.786ns logic, 4.746ns route)
+                                       (27.3% logic, 72.7% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'CLK'
-  Total number of paths / destination ports: 75 / 65
+  Total number of paths / destination ports: 69 / 62
 -------------------------------------------------------------------------
-Offset:              5.699ns (Levels of Logic = 4)
+Offset:              5.201ns (Levels of Logic = 2)
   Source:            rst (PAD)
-  Destination:       count_0 (FF)
+  Destination:       prescaler_0 (FF)
   Destination Clock: CLK rising
 
-  Data Path: rst to count_0
+  Data Path: rst to prescaler_0
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O            20   1.328   1.394  rst_IBUF (rst_IBUF)
-     LUT2:I0->O            1   0.250   1.137  _n0123_SW0_SW0 (N24)
-     LUT6:I0->O           10   0.254   1.008  _n0123 (_n0123)
-     LUT4:I3->O            1   0.254   0.000  count_0_rstpot (count_0_rstpot)
-     FD:D                      0.074          count_0
+     IBUF:I->O            20   1.328   1.741  rst_IBUF (rst_IBUF)
+     LUT6:I0->O           26   0.254   1.419  _n01171 (_n0117)
+     FDRE:R                    0.459          prescaler_0
     ----------------------------------------
-    Total                      5.699ns (2.160ns logic, 3.539ns route)
-                                       (37.9% logic, 62.1% route)
+    Total                      5.201ns (2.041ns logic, 3.160ns route)
+                                       (39.2% logic, 60.8% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'CLK'
@@ -516,21 +533,21 @@ Clock to Setup on destination clock CLK
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-CLK            |    5.812|         |         |         |
+CLK            |    6.532|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 =========================================================================
 
 
-Total REAL time to Xst completion: 9.00 secs
-Total CPU time to Xst completion: 6.84 secs
+Total REAL time to Xst completion: 5.00 secs
+Total CPU time to Xst completion: 5.26 secs
  
 --> 
 
 
-Total memory usage is 388528 kilobytes
+Total memory usage is 388520 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :   39 (   0 filtered)
-Number of infos    :   38 (   0 filtered)
+Number of warnings :   69 (   0 filtered)
+Number of infos    :   28 (   0 filtered)
 
