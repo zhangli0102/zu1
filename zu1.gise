@@ -135,7 +135,7 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1492642549" xil_pn:in_ck="-4047751709540293391" xil_pn:name="TRANEXT_xstsynthesize_spartan6" xil_pn:prop_ck="-812233012114639341" xil_pn:start_ts="1492642539">
+    <transform xil_pn:end_ts="1492740052" xil_pn:in_ck="-4047751709540293391" xil_pn:name="TRANEXT_xstsynthesize_spartan6" xil_pn:prop_ck="-812233012114639341" xil_pn:start_ts="1492740039">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
@@ -157,7 +157,7 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1492642553" xil_pn:in_ck="-7194427984256913399" xil_pn:name="TRANEXT_ngdbuild_FPGA" xil_pn:prop_ck="-1762778661205198651" xil_pn:start_ts="1492642549">
+    <transform xil_pn:end_ts="1492740058" xil_pn:in_ck="-7194427984256913399" xil_pn:name="TRANEXT_ngdbuild_FPGA" xil_pn:prop_ck="-1762778661205198651" xil_pn:start_ts="1492740052">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="_ngo"/>
@@ -166,7 +166,7 @@
       <outfile xil_pn:name="zu1.ngd"/>
       <outfile xil_pn:name="zu1_ngdbuild.xrpt"/>
     </transform>
-    <transform xil_pn:end_ts="1492642562" xil_pn:in_ck="-7194427941638470421" xil_pn:name="TRANEXT_map_spartan6" xil_pn:prop_ck="1448924893915930207" xil_pn:start_ts="1492642553">
+    <transform xil_pn:end_ts="1492740071" xil_pn:in_ck="-7194427941638470421" xil_pn:name="TRANEXT_map_spartan6" xil_pn:prop_ck="1448924893915930207" xil_pn:start_ts="1492740058">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
@@ -181,7 +181,7 @@
       <outfile xil_pn:name="zu1_summary.xml"/>
       <outfile xil_pn:name="zu1_usage.xml"/>
     </transform>
-    <transform xil_pn:end_ts="1492642573" xil_pn:in_ck="-1531068495323885315" xil_pn:name="TRANEXT_par_spartan6" xil_pn:prop_ck="93661965788626211" xil_pn:start_ts="1492642562">
+    <transform xil_pn:end_ts="1492740082" xil_pn:in_ck="-1531068495323885315" xil_pn:name="TRANEXT_par_spartan6" xil_pn:prop_ck="93661965788626211" xil_pn:start_ts="1492740071">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="_xmsgs/par.xmsgs"/>
@@ -195,7 +195,7 @@
       <outfile xil_pn:name="zu1_pad.txt"/>
       <outfile xil_pn:name="zu1_par.xrpt"/>
     </transform>
-    <transform xil_pn:end_ts="1492642581" xil_pn:in_ck="-5796282150027604320" xil_pn:name="TRANEXT_bitFile_spartan6" xil_pn:prop_ck="4970201210546912173" xil_pn:start_ts="1492642573">
+    <transform xil_pn:end_ts="1492740090" xil_pn:in_ck="-5796282150027604320" xil_pn:name="TRANEXT_bitFile_spartan6" xil_pn:prop_ck="4970201210546912173" xil_pn:start_ts="1492740082">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="_xmsgs/bitgen.xmsgs"/>
@@ -208,7 +208,7 @@
       <outfile xil_pn:name="zu1.drc"/>
       <outfile xil_pn:name="zu1.ut"/>
     </transform>
-    <transform xil_pn:end_ts="1492642573" xil_pn:in_ck="-7194433567272943517" xil_pn:name="TRAN_postRouteTrce" xil_pn:prop_ck="445577401284416184" xil_pn:start_ts="1492642569">
+    <transform xil_pn:end_ts="1492740082" xil_pn:in_ck="-7194433567272943517" xil_pn:name="TRAN_postRouteTrce" xil_pn:prop_ck="445577401284416184" xil_pn:start_ts="1492740078">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="_xmsgs/trce.xmsgs"/>

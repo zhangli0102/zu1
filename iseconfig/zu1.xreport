@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2017-04-19T17:33:08</DateModified>
+  <DateModified>2017-04-20T21:44:50</DateModified>
   <ModuleName>zu1</ModuleName>
   <SummaryTimeStamp>Unknown</SummaryTimeStamp>
   <SavedFilePath>/home/zhangli/src/fpga/zu1/iseconfig/zu1.xreport</SavedFilePath>
-  <ImplementationReportsDirectory>/home/zhangli/src/fpga/zu1</ImplementationReportsDirectory>
+  <ImplementationReportsDirectory>/home/zhangli/src/fpga/zu1/</ImplementationReportsDirectory>
   <DateInitialized>2017-04-19T17:33:08</DateInitialized>
   <EnableMessageFiltering>false</EnableMessageFiltering>
  </header>

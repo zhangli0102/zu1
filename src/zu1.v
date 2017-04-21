@@ -57,20 +57,26 @@ begin
 	   if (count < 25)
 	   begin
 		  pul_len1 <= 1500 - 8 * count;
-		  pul_len2 <= 1600;
-		  pul_len3 <= 1400;
-	   end
-	   if (count >= 25 && count < 75)
-	   begin
-		  pul_len1 <= 1100 + 8 * count;
 		  pul_len2 <= 1400;
 		  pul_len3 <= 1600;
+	   end
+	   if (count >= 25 && count < 50)
+	   begin
+		  pul_len1 <= 1100 + 8 * count;
+		  pul_len2 <= 1300 + 4 * count;
+		  pul_len3 <= 1700 - 4 * count;
+	   end
+		if (count >= 50 && count < 75)
+	   begin
+		  pul_len1 <= 1100 + 8 * count;
+		  pul_len2 <= 1700 - 4 * count;
+		  pul_len3 <= 1300 + 4 * count;
 	   end
 	   if (count >= 75 && count < 100)
 	   begin
 		  pul_len1 <= 2300 - 8 * count;
-		  pul_len2 <= 1600;
-		  pul_len3 <= 1400;
+		  pul_len2 <= 1400;
+		  pul_len3 <= 1600;
       end
 	   if (count == 99)
 	   begin
